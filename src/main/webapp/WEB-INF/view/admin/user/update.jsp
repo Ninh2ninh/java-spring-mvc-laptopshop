@@ -16,24 +16,26 @@
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Create User ${id}</title>
+                <title>Update User ${id}</title>
             </head>
 
             <body>
                 <div class="container mt-5">
                     <div class="row">
                         <div class="col-md-6 col-12 mx-auto">
-                            <h3>Create a user</h3>
+                            <h3>Update user</h3>
                             <hr />
-                            <form:form method="post" action="/admin/user/create" modelAttribute="newUser">
+                            <form:form method="post" action="/admin/user/update" modelAttribute="newUser">
+                                <div class="mb-3" style="display: none;">
+                                    <label for="" class="form-lable">ID:</label>
+                                    <form:input type="text" name="" id="" class="form-control" path="id" />
+                                </div>
                                 <div class="mb-3">
                                     <label for="" class="form-lable">Email:</label>
-                                    <form:input type="email" name="" id="" class="form-control" path="email" />
+                                    <form:input type="email" name="" id="" class="form-control" path="email"
+                                        disabled="true" />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="" class="form-lable">Password:</label>
-                                    <form:input type="password" name="" id="" class="form-control" path="password" />
-                                </div>
+
                                 <div class="mb-3">
                                     <label for="" class="form-lable">Phone:</label>
                                     <form:input type="text" name="" id="" class="form-control" path="phone" />
@@ -46,7 +48,7 @@
                                     <label for="" class="form-lable">Address:</label>
                                     <form:input type="text" name="" id="" class="form-control" path="address" />
                                 </div>
-                                <button type="submit" class="btn btn-primary">Create</button>
+                                <button type="submit" class="btn btn-warning">Update</button>
                             </form:form>
                         </div>
                     </div>
